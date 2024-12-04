@@ -39,7 +39,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = (props) => {
   }, []);
 
   return (
-    <article className="w-full max-w-[340px] p-4 sm:p-6 bg-white rounded-lg shadow">
+    <article className="w-full max-w-[340px] p-6 bg-white rounded-lg shadow">
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-3">
           <div className="relative aspect-square w-[48px] flex-shrink-0">
@@ -52,7 +52,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = (props) => {
             />
           </div>
 
-          <div className="min-w-0 flex flex-col">
+          <div className="min-w-0 flex flex-col gap-[1px]">
             <h2 className="text-lg font-semibold text-neutral-900 truncate">
               {name}
             </h2>
