@@ -10,8 +10,8 @@ const testimonialData = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-8 flex justify-center bg-gradient-to-b from-gray-50 to-gray-300">
-      <div className="mt-[200px]">
+    <main className="min-h-screen flex justify-center bg-gradient-to-b from-gray-50 to-gray-300">
+      <div className="relative mt-[200px]">
         <TestimonialCard
           name={testimonialData.name}
           username={testimonialData.username}
