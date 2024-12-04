@@ -39,7 +39,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = (props) => {
   }, []);
 
   return (
-    <article className="w-full max-w-[340px] p-4 sm:p-6 bg-white rounded-lg shadow border border-gray-200/40">
+    <article className="w-full max-w-[340px] p-4 sm:p-6 bg-white rounded-lg shadow-lg border border-neutral-200">
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-3">
           <div className="relative aspect-square w-[48px] flex-shrink-0">
@@ -53,10 +53,12 @@ const TestimonialCard: React.FC<TestimonialCardProps> = (props) => {
           </div>
 
           <div className="min-w-0 flex flex-col">
-            <h2 className="text-base sm:text-lg font-semibold text-gray-900 truncate">
+            <h2 className="text-lg font-semibold text-neutral-900 truncate">
               {name}
             </h2>
-            <span className="text-sm text-gray-500 truncate">{username}</span>
+            <span className="text-sm text-neutral-500 truncate">
+              {username}
+            </span>
           </div>
         </div>
 
@@ -65,24 +67,24 @@ const TestimonialCard: React.FC<TestimonialCardProps> = (props) => {
           className="flex flex-col gap-2 overflow-hidden"
         >
           {!isExpanded && !isTruncated && (
-            <p className="text-sm sm:text-base text-gray-700 leading-relaxed break-words origin-top">
+            <p className="text-base text-neutral-900 leading-relaxed break-words origin-top">
               {testimonial}
             </p>
           )}
           {!isExpanded && isTruncated && (
-            <p className="text-sm sm:text-base text-gray-700 leading-relaxed break-words origin-top">
+            <p className="text-base text-neutral-900 leading-relaxed break-words origin-top">
               {testimonial.slice(0, maxTestimonialLength)}...
             </p>
           )}
           {isExpanded && isTruncated && (
-            <p className="text-sm sm:text-base text-gray-700 leading-relaxed break-words origin-top">
+            <p className="text-base text-neutral-900 leading-relaxed break-words origin-top">
               {testimonial}
             </p>
           )}
           {isTruncated && (
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="p-0 m-0 text-sm text-gray-500 hover:text-gray-800 font-medium"
+              className="p-0 m-0 text-sm text-neutral-500 hover:text-neutral-700 font-medium"
             >
               {isExpanded && (
                 <span className="flex items-center justify-end gap-1">
