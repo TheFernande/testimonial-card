@@ -39,7 +39,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = (props) => {
   }, []);
 
   return (
-    <article className="w-full max-w-[340px] p-4 sm:p-6 bg-white rounded-lg shadow-lg border border-neutral-200">
+    <article className="w-full max-w-[340px] p-4 sm:p-6 bg-white rounded-lg shadow">
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-3">
           <div className="relative aspect-square w-[48px] flex-shrink-0">
@@ -56,7 +56,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = (props) => {
             <h2 className="text-lg font-semibold text-neutral-900 truncate">
               {name}
             </h2>
-            <span className="text-sm text-neutral-500 truncate">
+            <span className="text-sm text-neutral-600 truncate">
               {username}
             </span>
           </div>
@@ -67,17 +67,17 @@ const TestimonialCard: React.FC<TestimonialCardProps> = (props) => {
           className="flex flex-col gap-2 overflow-hidden"
         >
           {!isExpanded && !isTruncated && (
-            <p className="text-base text-neutral-900 leading-relaxed break-words origin-top">
+            <p className="text-base font-normal text-neutral-600 leading-6 break-words origin-top">
               {testimonial}
             </p>
           )}
           {!isExpanded && isTruncated && (
-            <p className="text-base text-neutral-900 leading-relaxed break-words origin-top">
+            <p className="text-base font-normal text-neutral-600 leading-6 break-words origin-top">
               {testimonial.slice(0, maxTestimonialLength)}...
             </p>
           )}
           {isExpanded && isTruncated && (
-            <p className="text-base text-neutral-900 leading-relaxed break-words origin-top">
+            <p className="text-base font-normal text-neutral-600 leading-6 break-words origin-top">
               {testimonial}
             </p>
           )}
