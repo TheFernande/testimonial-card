@@ -39,7 +39,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = (props) => {
   }, []);
 
   return (
-    <article className="w-full max-w-[340px] p-6 bg-white rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.1),0_1px_2px_-1px_rgba(0,0,0,0.1)]">
+    <article className="w-full max-w-[340px] p-6 bg-white rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.1),0_1px_2px_rgba(0,0,0,0.06)] leading-6">
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-4">
           <div className="relative aspect-square w-[48px] flex-shrink-0">
